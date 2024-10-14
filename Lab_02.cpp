@@ -48,13 +48,42 @@ int main()
     // Output
     cout << "Кількість розміщених квадратів: " << totalSquares << endl;
     cout << "Площа незайнятої частини прямокутника: " << unusedArea << endl;
-    
+
+
+    //Tab 2, Task 29 Дано числа x, y, x1, y1, x2, y2. Перевірити істинність висловлювання: «Точка з
+    //координатами (x, y) лежить усередині прямокутника, ліва верхня вершина
+    //якого має координати (x1, y1), права нижня - (x2, y2), а сторони паралельні
+    //координатним осях».
+
+    cout << "\n________Tab2, Task 29________" << endl << endl;
+
+    //Input
+
+    cout << "Left top coordinates (x1, y1): ";
+    double x, y, x1, y1, x2, y2;
+    cout << "Right bottom coordinates (x2, y2): ";
+    cin >> x1 >> y1;
+    cout << "Point coordinates (x1, y1): ";
+    cin >> x2 >> y2;
+    cin >> x >> y;
+
+    //Calculations
+
+    bool res = x > x1 && x < x2 && y > y2 && y < y1;
+
+    //Output
+
+    cout << "A point with coordinates (x, y) lies inside a rectangle \n";
+    cout << "the top left vertex (x1, y), the bottom right - (x2, y2),\n";
+    cout << "and the sides are parallel to the coordinate axes : ";
+    cout << boolalpha << res << endl;
 
     //Tab 3, Task 3
 
     //Input: value of x
     cout << "\n________Tab3, Task 3________" << endl << endl;
-    double x;
+
+    double Y;
     cout << "Enter value of x: ";
     cin >> x;
 
@@ -72,7 +101,7 @@ int main()
     double third_term = (1.0 / 3.0) * log2(fabs(x));
 
     //Final result: y
-    double y = (first_term / second_term) + third_term;
+    Y = (first_term / second_term) + third_term;
 
     //Output
     cout << "y = " << y << endl;
